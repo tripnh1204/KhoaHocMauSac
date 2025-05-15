@@ -5,7 +5,7 @@ import colour
 
 st.set_page_config(page_title="Chuyển dịch màu CIELab", layout="centered")
 
-st.title("🔵 Biểu đồ CIELab và chuyển dịch màu từ Lab1 sang Lab2")
+st.title("Biểu đồ CIELab và chuyển dịch màu từ Lab1 sang Lab2")
 
 st.markdown("### Nhập giá trị CIELab:")
 
