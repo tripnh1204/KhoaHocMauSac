@@ -43,8 +43,7 @@ def set_background(image_file):
     """
     st.markdown(css, unsafe_allow_html=True)
 
-# Gọi hàm để đặt nền — đảm bảo file background.png có trong thư mục gốc
-set_background("background.png")
+set_background("background.jpg")
 
 # Layout chính
 col1, col2 = st.columns([4, 1])
