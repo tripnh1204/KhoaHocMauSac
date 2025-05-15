@@ -2,12 +2,18 @@ import streamlit as st
 
 st.set_page_config(page_title="Khoa học Màu sắc", layout="wide")
 
-# Đặt ảnh nền bằng cách dùng st.markdown với CSS position fixed, z-index -1
 page_bg_img = """
 <style>
+/* Đặt nền cho toàn bộ app */
 .stApp {
-  background: none;
+  background: none !important;
 }
+
+.block-container {
+  background: none !important;
+}
+
+/* Tạo div background nằm cố định toàn màn hình */
 .bg {
   position: fixed;
   top: 0;
@@ -19,7 +25,7 @@ page_bg_img = """
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
-  opacity: 0.4;  /* chỉnh độ trong suốt nếu muốn */
+  opacity: 0.4;
 }
 </style>
 
@@ -28,7 +34,6 @@ page_bg_img = """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-# Nội dung trang
 col1, col2 = st.columns([4,1])
 with col1:
     st.markdown("<h1 style='color:#0e4d92;'>Chào mừng bạn đến với project <i>Khoa học Màu sắc</i>!</h1>", unsafe_allow_html=True)
