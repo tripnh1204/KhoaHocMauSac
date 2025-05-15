@@ -1,25 +1,32 @@
 import streamlit as st
-import base64
 
 st.set_page_config(page_title="Khoa học Màu sắc", layout="wide")
 
-def set_background(image_file):
-    with open(image_file, "rb") as img:
-        encoded_string = base64.b64encode(img.read()).decode()
-    css = f"""
-    <style>
-    .stApp {{
-        background-image: url("data:image/jpg;base64,{encoded_string}");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-    }}
-    </style>
-    """
-    st.markdown(css, unsafe_allow_html=True)
+# Đặt ảnh nền bằng cách dùng st.markdown với CSS position fixed, z-index -1
+page_bg_img = """
+<style>
+.stApp {
+  background: none;
+}
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.4;  /* chỉnh độ trong suốt nếu muốn */
+}
+</style>
 
-set_background("background.jpg")  # chắc chắn file trong thư mục làm việc
+<div class="bg"></div>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Nội dung trang
 col1, col2 = st.columns([4,1])
