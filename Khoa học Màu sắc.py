@@ -1,35 +1,27 @@
 import streamlit as st
+import base64
 
 st.set_page_config(page_title="Khoa học Màu sắc", layout="wide")
 
-# CSS chèn background bằng div fixed full màn hình, đẩy xuống dưới hết
-page_bg = """
-<style>
-  /* Xóa background mặc định của Streamlit */
-  .stApp {
-    background: none !important;
-  }
+def set_background(image_file):
+    with open(image_file, "rb") as f:
+        data = f.read()
+    encoded = base64.b64encode(data).decode()
+    css = f"""
+    <style>
+        .stApp {{
+            background-image: url("data:image/jpg;base64,{encoded}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }}
+    </style>
+    """
+    st.markdown(css, unsafe_allow_html=True)
 
-  /* Div ảnh nền full màn hình */
-  .bg-img {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0.7);  /* giảm sáng nền, dễ đọc chữ */
-    z-index: -1; /* đẩy xuống dưới tất cả nội dung */
-  }
-</style>
+set_background("background.jpg")
 
-<div class="bg-img"></div>
-"""
-
-st.markdown(page_bg, unsafe_allow_html=True)
-
+# Phần nội dung app
 col1, col2 = st.columns([4, 1])
 with col1:
     st.markdown("<h1 style='color:#0e4d92;'>Chào mừng bạn đến với project <i>Khoa học Màu sắc</i>!</h1>", unsafe_allow_html=True)
