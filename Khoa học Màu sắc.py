@@ -1,5 +1,5 @@
 import streamlit as st
-
+import base64
 # Cấu hình trang
 st.set_page_config(
     page_title="Khoa học Màu sắc",
