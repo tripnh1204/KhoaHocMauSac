@@ -44,4 +44,4 @@ with col1:
     """, unsafe_allow_html=True)
 
 with col2:
-    st.image("logo-hcmute.png", width=140)
+    st.image("logo-hcmute.jpg", width=140)
