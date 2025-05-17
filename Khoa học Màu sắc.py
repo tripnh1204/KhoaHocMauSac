@@ -79,7 +79,7 @@ with col2:
         </style>
     """, unsafe_allow_html=True)
 
-    # Hiển thị 2 ảnh thành viên theo chiều ngang, avatar tròn
+    # Hiển thị 2 ảnh thành viên theo chiều ngang
     member_col1, member_col2 = st.columns(2)
 
     with member_col1:
