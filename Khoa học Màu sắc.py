@@ -82,3 +82,12 @@ with col2:
     }
     </style>
     """, unsafe_allow_html=True)
+   # CSS chỉ áp dụng cho class avatar
+    st.markdown("""
+        <style>
+        .avatar {
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        </style>
+    """, unsafe_allow_html=True)
