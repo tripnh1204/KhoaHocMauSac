@@ -7,7 +7,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# Hàm chèn background với overlay mờ để dễ nhìn chữ
+# Hàm chèn background với overlay mờ
 def set_background(image_file):
     with open(image_file, "rb") as f:
         data = f.read()
@@ -15,7 +15,7 @@ def set_background(image_file):
     css = f"""
     <style>
         .stApp {{
-            background-image: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), 
+            background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
                               url("data:image/jpg;base64,{encoded}");
             background-size: cover;
             background-position: center;
@@ -37,4 +37,19 @@ with col1:
     st.markdown("<p style='font-size:20px;color:#222;'>Dự án này được thực hiện bởi nhóm sinh viên HCMUTE.</p>", unsafe_allow_html=True)
 
     st.markdown("""
-        <div style='background-color:rgba(255, 255
+        <div style='background-color:rgba(255, 255, 255, 0.95);
+                    padding:20px;
+                    border-radius:12px;
+                    box-shadow:0 0 10px rgba(0,0,0,0.1);
+                    margin-top:20px;
+                    color:#000000;'>
+            <h4>Thành viên nhóm:</h4>
+            <ul>
+                <li><b>Phạm Nguyễn Hữu Trí</b> - MSSV: 22158100</li>
+                <li><b>Đào Nguyễn Ngọc Linh</b> - MSSV: 22158064</li>
+            </ul>
+        </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.image("logo-hcmute.jpg", width=140)
