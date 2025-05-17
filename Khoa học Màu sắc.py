@@ -61,13 +61,16 @@ with col2:
   
     st.markdown("<hr>", unsafe_allow_html=True) 
     
-    # Tiêu đề cho ảnh thành viên
-    st.markdown("<h5 style='text-align:center;'>Ảnh thành viên nhóm</h5>", unsafe_allow_html=True)
+   # Tiêu đề cho ảnh thành viên
+    st.markdown("<h5 style='text-align:center; margin-top:10px;'>Ảnh thành viên nhóm</h5>", unsafe_allow_html=True)
     
     # 2 ảnh thành viên xếp ngang
     member_col1, member_col2 = st.columns(2)
+    
     with member_col1:
-        st.image("tri_img.jpg", width=120, caption="Phạm Nguyễn Hữu Trí")
+        st.image("tri_img.jpg", width=130)
+        st.markdown("<p style='text-align:center; font-size:14px; font-weight:500;'>Phạm Nguyễn Hữu Trí</p>", unsafe_allow_html=True)
+        
     with member_col2:
-        st.image("linh_img.jpg", width=120, caption="Đào Nguyễn Ngọc Linh")  
-
+        st.image("linh_img.jpg", width=130)
+        st.markdown("<p style='text-align:center; font-size:14px; font-weight:500;'>Đào Nguyễn Ngọc Linh</p>", unsafe_allow_html=True)
