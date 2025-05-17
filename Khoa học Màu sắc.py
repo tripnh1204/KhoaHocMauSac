@@ -52,5 +52,10 @@ with col1:
     """, unsafe_allow_html=True)
 
 with col2:
-    st.image("logo-hcmute.jpg", width=140)
+    # Logo HCMUTE và GAM xếp ngang
+    col_logo1, col_logo2 = st.columns(2)
+    with col_logo1:
+        st.image("logo-hcmute.jpg", width=100)
+    with col_logo2:
+        st.image("gam-logo.png", width=100) 
 
