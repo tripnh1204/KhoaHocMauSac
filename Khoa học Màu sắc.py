@@ -57,6 +57,6 @@ with col2:
     with col_logo1:
         st.image("logo-hcmute.jpg", width=100)
     with col_logo2:
-        st.image("gamlogo.jpg", width=100) 
+        st.image("gamlogo.png", width=100) 
   
 
