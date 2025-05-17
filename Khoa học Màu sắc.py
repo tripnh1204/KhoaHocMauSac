@@ -64,21 +64,21 @@ with col2:
    # Tiêu đề cho ảnh thành viên
     st.markdown("<h5 style='text-align:center; margin-top:10px;'>Ảnh thành viên nhóm</h5>", unsafe_allow_html=True)
     
-   # 2 ảnh thành viên xếp ngang
+    # 2 ảnh thành viên dạng tròn xếp ngang
     member_col1, member_col2 = st.columns(2)
 
     with member_col1:
         st.markdown("""
-        <div style='text-align:center; margin-right:10px;'>
-            <img src='tri_img.jpg' style='width:100px; border-radius:12px;'><br>
-            <span style='font-size:14px;'>Phạm Nguyễn Hữu Trí</span>
+        <div style='text-align:center;'>
+            <img src='tri_img.jpg' style='width:100px; height:100px; object-fit:cover; border-radius:50%; border:2px solid #ccc;'>
+            <div style='margin-top:8px; font-size:14px;'>Phạm Nguyễn Hữu Trí</div>
         </div>
         """, unsafe_allow_html=True)
 
     with member_col2:
         st.markdown("""
-        <div style='text-align:center; margin-left:10px;'>
-            <img src='linh_img.jpg' style='width:100px; border-radius:12px;'><br>
-            <span style='font-size:14px;'>Đào Nguyễn Ngọc Linh</span>
+        <div style='text-align:center;'>
+            <img src='linh_img.jpg' style='width:100px; height:100px; object-fit:cover; border-radius:50%; border:2px solid #ccc;'>
+            <div style='margin-top:8px; font-size:14px;'>Đào Nguyễn Ngọc Linh</div>
         </div>
         """, unsafe_allow_html=True)
