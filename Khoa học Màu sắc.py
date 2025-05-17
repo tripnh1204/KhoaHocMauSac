@@ -67,21 +67,11 @@ with col2:
    # Ảnh thành viên (dùng avatar tròn)
     member_col1, member_col2 = st.columns(2)
 
-    with member_col1:
-        st.markdown("""
-            <div style='text-align: center;'>
-                <img src='tri_img.jpg' class='avatar' width='100'><br>
-                <span>Phạm Nguyễn Hữu Trí</span>
-            </div>
-        """, unsafe_allow_html=True)
+ with member_col1:
+        st.image("tri_img.jpg", width=120, caption="Phạm Nguyễn Hữu Trí")
 
     with member_col2:
-        st.markdown("""
-            <div style='text-align: center;'>
-                <img src='linh_img.jpg' class='avatar' width='100'><br>
-                <span>Đào Nguyễn Ngọc Linh</span>
-            </div>
-        """, unsafe_allow_html=True)
+        st.image("linh_img.jpg", width=120, caption="Đào Nguyễn Ngọc Linh")
 
     # CSS chỉ áp dụng cho class avatar
     st.markdown("""
