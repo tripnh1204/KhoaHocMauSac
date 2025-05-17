@@ -53,3 +53,7 @@ with col1:
 
 with col2:
     st.image("logo-hcmute.jpg", width=140)
+    st.markdown("### ")
+    st.markdown("<p style='text-align:center;font-weight:bold;'>Thành viên:</p>", unsafe_allow_html=True)
+    st.image("tri.jpg", caption="Phạm Nguyễn Hữu Trí", use_column_width=True)
+    st.image("linh.jpg", caption="Đào Nguyễn Ngọc Linh", use_column_width=True)
