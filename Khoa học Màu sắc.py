@@ -64,25 +64,26 @@ with col2:
    # Tiêu đề cho ảnh thành viên
     st.markdown("<h5 style='text-align:center; margin-top:10px;'>Ảnh thành viên nhóm</h5>", unsafe_allow_html=True)
     
-    # 2 ảnh avatar thành viên xếp ngang
+   # Ảnh thành viên (dùng avatar tròn)
     member_col1, member_col2 = st.columns(2)
 
     with member_col1:
-        st.image("tri_img.jpg", width=120, caption="Phạm Nguyễn Hữu Trí")
+        st.markdown("""
+            <div style='text-align: center;'>
+                <img src='tri_img.jpg' class='avatar' width='100'><br>
+                <span>Phạm Nguyễn Hữu Trí</span>
+            </div>
+        """, unsafe_allow_html=True)
 
     with member_col2:
-        st.image("linh_img.jpg", width=120, caption="Đào Nguyễn Ngọc Linh")
+        st.markdown("""
+            <div style='text-align: center;'>
+                <img src='linh_img.jpg' class='avatar' width='100'><br>
+                <span>Đào Nguyễn Ngọc Linh</span>
+            </div>
+        """, unsafe_allow_html=True)
 
-    # CSS bo tròn ảnh
-    st.markdown("""
-    <style>
-    img {
-        border-radius: 50% !important;
-        object-fit: cover !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-   # CSS chỉ áp dụng cho class avatar
+    # CSS chỉ áp dụng cho class avatar
     st.markdown("""
         <style>
         .avatar {
